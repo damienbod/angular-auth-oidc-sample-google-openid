@@ -5,7 +5,7 @@
   "main": "wwwroot/index.html",
   "author": "",
   "license": "ISC",
-    "repository": {
+  "repository": {
     "type": "git",
     "url": "https://github.com/damienbod/Angular2WebpackVisualStudio.git"
   },
@@ -40,13 +40,14 @@
     "rxjs": "5.3.0",
     "zone.js": "0.8.8",
     "bootstrap": "^3.3.7",
-    "ie-shim": "~0.1.0"
+    "ie-shim": "~0.1.0",
+    "angular-auth-oidc-client": "file:///C:\\git\\angular2Tests\\angular-auth-oidc-client\\angular-auth-oidc-client-0.0.8.tgz"
   },
   "devDependencies": {
-    "@types/node": "7.0.13",
     "@types/jasmine": "2.5.47",
-    "angular2-template-loader": "0.6.2",
+    "@types/node": "7.0.13",
     "angular-router-loader": "^0.6.0",
+    "angular2-template-loader": "0.6.2",
     "awesome-typescript-loader": "3.1.2",
     "clean-webpack-plugin": "^0.1.16",
     "concurrently": "^3.4.0",
@@ -54,8 +55,15 @@
     "css-loader": "^0.28.0",
     "file-loader": "^0.11.1",
     "html-webpack-plugin": "^2.28.0",
+    "jasmine-core": "2.5.2",
     "jquery": "^3.2.1",
     "json-loader": "^0.5.4",
+    "karma": "1.6.0",
+    "karma-chrome-launcher": "2.0.0",
+    "karma-jasmine": "1.1.0",
+    "karma-sourcemap-loader": "0.3.7",
+    "karma-spec-reporter": "0.0.31",
+    "karma-webpack": "2.0.3",
     "node-sass": "^4.5.2",
     "raw-loader": "^0.5.1",
     "rimraf": "^2.6.1",
@@ -68,14 +76,7 @@
     "typescript": "2.3.2",
     "url-loader": "^0.5.8",
     "webpack": "^2.4.1",
-    "webpack-dev-server": "2.4.2",
-    "jasmine-core": "2.5.2",
-    "karma": "1.6.0",
-    "karma-chrome-launcher": "2.0.0",
-    "karma-jasmine": "1.1.0",
-    "karma-sourcemap-loader": "0.3.7",
-    "karma-spec-reporter": "0.0.31",
-    "karma-webpack": "2.0.3"
+    "webpack-dev-server": "2.4.2"
   },
   "-vs-binding": {
     "ProjectOpened": [
