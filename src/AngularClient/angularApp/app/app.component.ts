@@ -17,6 +17,7 @@ import './app.component.css';
 export class AppComponent implements OnInit {
 
     constructor(public securityService: OidcSecurityService) {
+        // this.securityService.setStorage(localStorage);
     }
 
     ngOnInit() {
