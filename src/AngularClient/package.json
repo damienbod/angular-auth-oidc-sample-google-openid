@@ -41,7 +41,7 @@
     "zone.js": "0.8.8",
     "bootstrap": "^3.3.7",
     "ie-shim": "~0.1.0",
-    "angular-auth-oidc-client": "1.0.8"
+    "angular-auth-oidc-client": "C:\\\\git\\\\angular2Tests\\\\angular-auth-oidc-client\\angular-auth-oidc-client-1.1.0.tgz"
   },
   "devDependencies": {
     "@types/jasmine": "2.5.47",
