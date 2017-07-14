@@ -10,7 +10,9 @@ import { ForbiddenComponent } from './forbidden/forbidden.component';
 import { HomeComponent } from './home/home.component';
 import { UnauthorizedComponent } from './unauthorized/unauthorized.component';
 
-import { AuthModule, OidcSecurityService, OpenIDImplicitFlowConfiguration } from 'angular-auth-oidc-client';
+import { AuthModule } from './auth/modules/auth.module';
+import { OidcSecurityService } from './auth/services/oidc.security.service';
+import { OpenIDImplicitFlowConfiguration } from './auth/modules/auth.configuration';
 
 @NgModule({
     imports: [
