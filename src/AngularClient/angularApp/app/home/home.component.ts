@@ -27,10 +27,6 @@ export class HomeComponent implements OnInit, OnDestroy {
                 this.isAuthorized = isAuthorized;
             });
 
-        if (window.location.hash) {
-            this.oidcSecurityService.authorizedCallback();
-        }
-
         this.userDataSubscription = this.oidcSecurityService.getUserData().subscribe(
             (userData: any) => {
 
