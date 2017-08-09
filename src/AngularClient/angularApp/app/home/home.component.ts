@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.userDataSubscription = this.oidcSecurityService.getUserData().subscribe(
             (userData: any) => {
 
-                if (userData != '') {
+                if (userData && userData != '') {
                     this.name = userData.name;
                     this.email = userData.email;
                 }
