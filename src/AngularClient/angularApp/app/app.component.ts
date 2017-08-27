@@ -11,7 +11,7 @@ import { UnauthorizedComponent } from './unauthorized/unauthorized.component';
 import './app.component.css';
 
 @Component({
-    selector: 'my-app',
+    selector: 'app-component',
     templateUrl: 'app.component.html'
 })
 
