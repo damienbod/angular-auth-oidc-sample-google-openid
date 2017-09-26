@@ -9,6 +9,8 @@ import { HttpModule, JsonpModule } from '@angular/http';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
 import { HomeComponent } from './home/home.component';
 import { UnauthorizedComponent } from './unauthorized/unauthorized.component';
+import { NavigationComponent } from './navigation/navigation.component';
+import { AutoLoginComponent } from './auto-login/auto-login.component';
 
 import { AuthModule, OidcSecurityService, OpenIDImplicitFlowConfiguration } from 'angular-auth-oidc-client';
 
@@ -25,6 +27,8 @@ import { AuthModule, OidcSecurityService, OpenIDImplicitFlowConfiguration } from
         AppComponent,
         ForbiddenComponent,
         HomeComponent,
+        AutoLoginComponent,
+        NavigationComponent,
         UnauthorizedComponent
     ],
     providers: [

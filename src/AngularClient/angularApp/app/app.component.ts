@@ -17,9 +17,6 @@ import './app.component.css';
 
 export class AppComponent implements OnInit, OnDestroy {
 
-    isAuthorizedSubscription: Subscription;
-    isAuthorized: boolean;
-
     constructor(public oidcSecurityService: OidcSecurityService) {
         if (this.oidcSecurityService.moduleSetup) {
             this.doCallbackLogicIfRequired();
@@ -31,14 +28,9 @@ export class AppComponent implements OnInit, OnDestroy {
     }
 
     ngOnInit() {
-        this.isAuthorizedSubscription = this.oidcSecurityService.getIsAuthorized().subscribe(
-            (isAuthorized: boolean) => {
-                this.isAuthorized = isAuthorized;
-            });
     }
 
     ngOnDestroy(): void {
-        this.isAuthorizedSubscription.unsubscribe();
         this.oidcSecurityService.onModuleSetup.unsubscribe();
     }
 
