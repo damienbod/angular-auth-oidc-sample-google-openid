@@ -5,7 +5,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { Configuration } from './app.constants';
 import { routing } from './app.routes';
-import { HttpModule, JsonpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
 import { HomeComponent } from './home/home.component';
 import { UnauthorizedComponent } from './unauthorized/unauthorized.component';
@@ -19,8 +20,7 @@ import { AuthModule, OidcSecurityService, OpenIDImplicitFlowConfiguration } from
         BrowserModule,
         FormsModule,
         routing,
-        HttpModule,
-        JsonpModule,
+        HttpClientModule,
         AuthModule.forRoot(),
     ],
     declarations: [
