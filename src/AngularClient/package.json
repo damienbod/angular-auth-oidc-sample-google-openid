@@ -37,7 +37,7 @@
     "bootstrap": "3.3.7",
     "core-js": "2.5.1",
     "ie-shim": "0.1.0",
-    "angular-auth-oidc-client": "3.0.0",
+    "angular-auth-oidc-client": "3.0.1",
     "rxjs": "5.4.3",
     "zone.js": "0.8.16"
   },
