@@ -78,7 +78,12 @@ export class AppComponent implements OnInit, OnDestroy {
     }
 
     private read(key: string): any {
-        return JSON.parse(localStorage.getItem(key));
+        const data = localStorage.getItem(key);
+        if (data != null) {
+            return JSON.parse(data);
+        }
+
+        return;
     }
 
     private write(key: string, value: any): void {
