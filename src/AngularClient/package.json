@@ -35,7 +35,7 @@
     "@angular/platform-server": "5.2.0",
     "@angular/router": "5.2.0",
     "@angular/upgrade": "5.2.0",
-    "angular-auth-oidc-client": "file:../../../angular-auth-oidc-client/angular-auth-oidc-client-4.0.0.tgz",
+    "angular-auth-oidc-client": "4.0.0",
     "bootstrap": "3.3.7",
     "core-js": "2.5.3",
     "ie-shim": "0.1.0",
