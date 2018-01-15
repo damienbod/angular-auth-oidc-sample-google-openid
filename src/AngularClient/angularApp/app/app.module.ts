@@ -16,7 +16,7 @@ import { AuthModule, OidcSecurityService, OpenIDImplicitFlowConfiguration, OidcC
 
 export function loadConfig(oidcConfigService: OidcConfigService) {
     console.log('APP_INITIALIZER STARTING');
-    return () => oidcConfigService.load_using_stsServer('https://localhost:44318');
+    return () => oidcConfigService.load_using_stsServer('https://accounts.google.com');
 }
 
 @NgModule({
