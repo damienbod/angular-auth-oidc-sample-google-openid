@@ -23,7 +23,7 @@
     "lint": "tslint ./angularApp"
   },
   "dependencies": {
-    "bootstrap": "3.3.7",
+    "bootstrap": "4.0.0",
     "@angular/animations": "5.2.3",
     "@angular/common": "5.2.3",
     "@angular/compiler": "5.2.3",
