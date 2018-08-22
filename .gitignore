@@ -11,3 +11,4 @@ AngularGoogleClient/node_modules
 /AngularGoogleClient/angularApp/**/*.js
 /AngularGoogleClient/angularApp/**/*.js.map
 /AngularGoogleClient/obj
+/AngularGoogleClient/wwwroot/dist
