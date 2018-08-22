@@ -4,6 +4,10 @@ https://damienbod.com/2017/06/16/angular-oidc-oauth2-client-with-google-identity
 
 https://damienbod.com/2017/09/26/auto-redirect-to-an-sts-server-in-an-angular-app-using-oidc-implicit-flow/
 
+## History
+
+2018-08-22 Updated npm packages, OIDC lib
+
 ## Links
 
 https://www.npmjs.com/package/angular-auth-oidc-client
