@@ -10,7 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngularClient", "src\AngularClient\AngularClient.csproj", "{17C07A58-822E-4512-A14B-DAA39CA0F509}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngularGoogleClient", "AngularGoogleClient\AngularGoogleClient.csproj", "{17C07A58-822E-4512-A14B-DAA39CA0F509}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,5 +28,8 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{17C07A58-822E-4512-A14B-DAA39CA0F509} = {A0F6C07F-188D-4F86-B43F-4A3EAD0D2C30}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {45972632-E508-4F90-83E9-7A62E8AD7FD1}
 	EndGlobalSection
 EndGlobal
