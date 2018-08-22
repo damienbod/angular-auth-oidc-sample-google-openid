@@ -6,7 +6,7 @@ https://damienbod.com/2017/09/26/auto-redirect-to-an-sts-server-in-an-angular-ap
 
 ## History
 
-2018-08-22 Updated npm packages, OIDC lib
+2018-08-22 Updated npm packages, OIDC lib, nuget package, .NET Core 2.1
 
 ## Links
 
