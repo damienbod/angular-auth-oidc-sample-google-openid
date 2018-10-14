@@ -12,3 +12,4 @@ AngularGoogleClient/node_modules
 /AngularGoogleClient/angularApp/**/*.js.map
 /AngularGoogleClient/obj
 /AngularGoogleClient/wwwroot/dist
+/AngularGoogleClient/AngularGoogleClient.csproj.user
