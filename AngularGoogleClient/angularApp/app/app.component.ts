@@ -1,7 +1,9 @@
 ﻿import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { OidcSecurityService, AuthorizationResult} from 'angular-auth-oidc-client';
+import { OidcSecurityService, AuthorizationResult, AuthorizationState} from 'angular-auth-oidc-client';
+
+//import { ValidationResult } from 'angular-auth-oidc-client
 
 import './app.component.css';
 
@@ -68,9 +70,13 @@ export class AppComponent implements OnInit, OnDestroy {
     }
 
     private onAuthorizationResultComplete(authorizationResult: AuthorizationResult) {
-        console.log('AppComponent:onAuthorizationResultComplete');
+
         const path = this.read('redirect');
-        if (authorizationResult === AuthorizationResult.authorized) {
+        console.log('Auth result received AuthorizationState:'
+            + authorizationResult.authorizationState
+            + ' validationResult:' + authorizationResult.validationResult);
+
+        if (authorizationResult.authorizationState === AuthorizationState.authorized) {
             this.router.navigate([path]);
         } else {
             this.router.navigate(['/Unauthorized']);
