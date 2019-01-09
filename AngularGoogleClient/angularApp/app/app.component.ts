@@ -35,7 +35,6 @@ export class AppComponent implements OnInit, OnDestroy {
     }
 
     ngOnDestroy(): void {
-        this.oidcSecurityService.onModuleSetup.unsubscribe();
     }
 
     login() {
@@ -55,7 +54,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
     private onOidcModuleSetup() {
         if (window.location.hash) {
-            this.oidcSecurityService.authorizedCallback();
+            this.oidcSecurityService.authorizedImplicitFlowCallback();
         } else {
             if ('/autologin' !== window.location.pathname) {
                 this.write('redirect', window.location.pathname);
