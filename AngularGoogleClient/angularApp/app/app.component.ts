@@ -3,8 +3,6 @@ import { Router } from '@angular/router';
 
 import { OidcSecurityService, AuthorizationResult, AuthorizationState} from 'angular-auth-oidc-client';
 
-//import { ValidationResult } from 'angular-auth-oidc-client
-
 import './app.component.css';
 
 @Component({

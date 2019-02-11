@@ -12,7 +12,13 @@ import { UnauthorizedComponent } from './unauthorized/unauthorized.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { AutoLoginComponent } from './auto-login/auto-login.component';
 
-import { AuthModule, OidcSecurityService, OpenIDImplicitFlowConfiguration, OidcConfigService, AuthWellKnownEndpoints } from 'angular-auth-oidc-client';
+import {
+    AuthModule,
+    OidcSecurityService,
+    OpenIDImplicitFlowConfiguration,
+    OidcConfigService,
+    AuthWellKnownEndpoints
+} from 'angular-auth-oidc-client';
 
 export function loadConfig(oidcConfigService: OidcConfigService) {
     console.log('APP_INITIALIZER STARTING');
@@ -56,10 +62,11 @@ export class AppModule {
     ) {
         this.oidcConfigService.onConfigurationLoaded.subscribe(() => {
 
-        let openIDImplicitFlowConfiguration = new OpenIDImplicitFlowConfiguration();
+        const openIDImplicitFlowConfiguration = new OpenIDImplicitFlowConfiguration();
         openIDImplicitFlowConfiguration.stsServer = 'https://accounts.google.com';
         openIDImplicitFlowConfiguration.redirect_url = 'https://localhost:44386';
-        openIDImplicitFlowConfiguration.client_id = '188968487735-b1hh7k87nkkh6vv84548sinju2kpr7gn.apps.googleusercontent.com';
+        openIDImplicitFlowConfiguration.client_id =
+                '188968487735-b1hh7k87nkkh6vv84548sinju2kpr7gn.apps.googleusercontent.com';
         openIDImplicitFlowConfiguration.response_type = 'id_token token';
         openIDImplicitFlowConfiguration.scope = 'openid email profile';
         openIDImplicitFlowConfiguration.post_logout_redirect_uri = 'https://localhost:44386/Unauthorized';

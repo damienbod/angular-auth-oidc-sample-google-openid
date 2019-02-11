@@ -3,7 +3,7 @@ import { Subscription } from 'rxjs';
 import { OidcSecurityService } from 'angular-auth-oidc-client';
 
 @Component({
-    selector: 'home',
+    selector: 'app-home',
     templateUrl: 'home.component.html'
 })
 
@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.userDataSubscription = this.oidcSecurityService.getUserData().subscribe(
             (userData: any) => {
 
-                if (userData && userData != '') {
+                if (userData && userData !== '') {
                     this.name = userData.name;
                     this.email = userData.email;
                 }
