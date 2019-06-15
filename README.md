@@ -6,6 +6,8 @@ https://damienbod.com/2017/09/26/auto-redirect-to-an-sts-server-in-an-angular-ap
 
 ## History
 
+2019-06-15 updated npm packages, OIDC lib 10.0.0
+
 2019-02-11 updated npm packages, OIDC lib 9.0.2
 
 2019-01-09 updated npm packages, OIDC lib 9.0.0
