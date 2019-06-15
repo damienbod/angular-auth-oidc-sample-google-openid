@@ -15,9 +15,9 @@ import { AutoLoginComponent } from './auto-login/auto-login.component';
 import {
     AuthModule,
     OidcSecurityService,
-    OpenIDImplicitFlowConfiguration,
+    ConfigResult,
     OidcConfigService,
-    AuthWellKnownEndpoints
+    OpenIdConfiguration
 } from 'angular-auth-oidc-client';
 
 export function loadConfig(oidcConfigService: OidcConfigService) {
@@ -60,29 +60,32 @@ export class AppModule {
         private oidcSecurityService: OidcSecurityService,
         private oidcConfigService: OidcConfigService,
     ) {
-        this.oidcConfigService.onConfigurationLoaded.subscribe(() => {
 
-        const openIDImplicitFlowConfiguration = new OpenIDImplicitFlowConfiguration();
-        openIDImplicitFlowConfiguration.stsServer = 'https://accounts.google.com';
-        openIDImplicitFlowConfiguration.redirect_url = 'https://localhost:44386';
-        openIDImplicitFlowConfiguration.client_id =
-                '188968487735-b1hh7k87nkkh6vv84548sinju2kpr7gn.apps.googleusercontent.com';
-        openIDImplicitFlowConfiguration.response_type = 'id_token token';
-        openIDImplicitFlowConfiguration.scope = 'openid email profile';
-        openIDImplicitFlowConfiguration.post_logout_redirect_uri = 'https://localhost:44386/Unauthorized';
-        openIDImplicitFlowConfiguration.post_login_route = '/home';
-        openIDImplicitFlowConfiguration.forbidden_route = '/Forbidden';
-        openIDImplicitFlowConfiguration.unauthorized_route = '/Unauthorized';
-        openIDImplicitFlowConfiguration.trigger_authorization_result_event = true;
-        openIDImplicitFlowConfiguration.log_console_warning_active = true;
-        openIDImplicitFlowConfiguration.log_console_debug_active = true;
-        openIDImplicitFlowConfiguration.max_id_token_iat_offset_allowed_in_seconds = 20;
+        this.oidcConfigService.onConfigurationLoaded.subscribe((configResult: ConfigResult) => {
 
-        const authWellKnownEndpoints = new AuthWellKnownEndpoints();
-        authWellKnownEndpoints.setWellKnownEndpoints(this.oidcConfigService.wellKnownEndpoints);
+            const config: OpenIdConfiguration = {
+                stsServer: 'https://accounts.google.com',
+                redirect_url: 'https://localhost:44386',
+                client_id: '188968487735-b1hh7k87nkkh6vv84548sinju2kpr7gn.apps.googleusercontent.com',
+                response_type: 'id_token token',
+                scope: 'openid email profile',
+                trigger_authorization_result_event: true,
+                post_logout_redirect_uri: 'https://localhost:44386/unauthorized',
+                start_checksession: false,
+                silent_renew: false,
+                silent_renew_url: 'https://localhost:44386/silent-renew.html',
+                post_login_route: '/home',
+                forbidden_route: '/forbidden',
+                unauthorized_route: '/unauthorized',
+                log_console_warning_active: true,
+                log_console_debug_active: true,
+                max_id_token_iat_offset_allowed_in_seconds: 30,
+                history_cleanup_off: true
+                // iss_validation_off: false
+                // disable_iat_offset_validation: true
+            };
 
-        this.oidcSecurityService.setupModule(openIDImplicitFlowConfiguration, authWellKnownEndpoints);
-
+            this.oidcSecurityService.setupModule(config, configResult.authWellknownEndpoints);
         });
 
         console.log('APP STARTING');
