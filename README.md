@@ -6,6 +6,8 @@ https://damienbod.com/2017/09/26/auto-redirect-to-an-sts-server-in-an-angular-ap
 
 ## History
 
+2019-09-20 Updated to ASP.NET Core 3.0 , npm packages, Angular 8.2.6, OIDC lib 10.0.8
+
 2019-09-01 Updated to ASP.NET Core 3.0 , npm packages, Angular 8.2.4, OIDC lib 10.0.5
 
 2019-08-19 updated npm packages, Angular 8.2.2, OIDC lib 10.0.3

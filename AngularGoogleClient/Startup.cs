@@ -36,7 +36,6 @@ namespace AngularGoogleClient
             });
 
             services.AddControllersWithViews().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
-            services.AddRazorPages().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
         }
 
         public void Configure(IApplicationBuilder app)
@@ -73,7 +72,6 @@ namespace AngularGoogleClient
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
-                endpoints.MapRazorPages();
             });
         }
     }
