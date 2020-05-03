@@ -1,23 +1,28 @@
 ﻿{
   "compilerOptions": {
-    "target": "es5",
-    "module": "es2015",
-    "moduleResolution": "node",
+    //"baseUrl": "./",
+    //"outDir": "./dist/out-tsc",
     "sourceMap": true,
-    "emitDecoratorMetadata": true,
+    "declaration": false,
+    "downlevelIteration": true,
     "experimentalDecorators": true,
-    "removeComments": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "lib": [
-      "es2015",
-      "dom"
+    "module": "esnext",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2015",
+    "lib": [ "es2018", "dom" ],
+    "typeRoots": [
+      "./node_modules/@types/"
     ]
   },
+  "exclude": [
+    "node_modules",
+    "./angularApp/main.ts",
+    "**/*.spec.ts",
+    "**/*mock.ts"
+  ],
   "angularCompilerOptions": {
-    "entryModule": "./angularApp/app/app.module#AppModule",
-    "skipMetadataEmit": true
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true
   }
 }
